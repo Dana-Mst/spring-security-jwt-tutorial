@@ -11,6 +11,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
+
+// Our custom filter that validated the JWT tokens.
+
 public class JwtTokenFilter extends GenericFilterBean {
     private JwtTokenServices jwtTokenServices;
 

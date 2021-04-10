@@ -12,6 +12,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.stream.Collectors;
 
+/*
+ There must be a class that implements UserDetailsService otherwise Spring will create a default
+ UserDetailsService (an instance of InMemoryUserDetailsManager, see UserDetailsServiceAutoConfiguration) that does not
+ know where to find users for authentication.
+*/
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
     private UserRepository users;
